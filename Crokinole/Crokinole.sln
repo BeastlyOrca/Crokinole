@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.EditorCoroutines.Edit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Shared.Editor", "Unity.VisualScripting.Shared.Editor.csproj", "{9EF0F710-3EE9-B5E1-0791-BBBEA31A1020}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{F4EF6B2C-9D23-D06D-ABD6-8E2E820C0349}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,10 @@ Global
 		{9EF0F710-3EE9-B5E1-0791-BBBEA31A1020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF0F710-3EE9-B5E1-0791-BBBEA31A1020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF0F710-3EE9-B5E1-0791-BBBEA31A1020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EF6B2C-9D23-D06D-ABD6-8E2E820C0349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EF6B2C-9D23-D06D-ABD6-8E2E820C0349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EF6B2C-9D23-D06D-ABD6-8E2E820C0349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EF6B2C-9D23-D06D-ABD6-8E2E820C0349}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
