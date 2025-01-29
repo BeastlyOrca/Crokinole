@@ -137,6 +137,7 @@ public class Slingshot : MonoBehaviour
     }
 
     // this needs to be editied
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the collided object is another puck
@@ -161,5 +162,6 @@ public class Slingshot : MonoBehaviour
             }
         }
     }
+    */
 
 }
