@@ -7,8 +7,8 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PuckPhysics
-  dynamicFriction: 2.79
+  dynamicFriction: 1
   staticFriction: 2
   bounciness: 1
   frictionCombine: 1
-  bounceCombine: 3
+  bounceCombine: 2
