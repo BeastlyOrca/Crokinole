@@ -43,7 +43,7 @@ public class Slingshot : MonoBehaviour
         //Debug.Log(puckRigidbody.velocity);
 
         // Update start position when the puck has stopped moving + rotating
-        if (!isPulling && puckRigidbody.velocity.magnitude < 0.15f && puckRigidbody.angularVelocity.magnitude > 0.15f)
+        if (!isPulling && puckRigidbody.velocity.magnitude < 0.15f && puckRigidbody.angularVelocity.magnitude > 0.3f)
         {
             UpdateStartPosition();
             stopMovement();
