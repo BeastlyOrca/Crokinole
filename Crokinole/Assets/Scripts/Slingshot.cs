@@ -32,6 +32,7 @@ public class Slingshot : MonoBehaviour
         else
         {
             lineRenderer.positionCount = 2; // Two points: start and pull position
+
             lineRenderer.enabled = false;  // Disable by default
         }
     }
@@ -39,11 +40,19 @@ public class Slingshot : MonoBehaviour
     void Update()
     {
         HandleInput();
+        //Debug.Log(puckRigidbody.velocity);
 
-        // Update start position when the puck has stopped moving
-        if (!isPulling && puckRigidbody.velocity.magnitude < 0.1f)
+        // Update start position when the puck has stopped moving + rotating
+        if (!isPulling && puckRigidbody.velocity.magnitude < 0.15f && puckRigidbody.angularVelocity.magnitude > 0.15f)
         {
             UpdateStartPosition();
+            stopMovement();
+        }
+
+        // Gradually reset rotation when it stops rotating
+        if (puckRigidbody.angularVelocity == Vector3.zero)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2f);
         }
     }
 
@@ -134,6 +143,15 @@ public class Slingshot : MonoBehaviour
     {
         // Update the starting position to the puck's current position when it stops moving
         startPosition = transform.position;
+    }
+
+
+    void stopMovement() {
+        puckRigidbody.velocity = Vector3.zero; // stop velocity
+        puckRigidbody.angularVelocity = Vector3.zero; // Stop rotation
+        //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3f);
+
+        //transform.rotation = Quaternion.identity; // Reset rotation to (0,0,0)
     }
 
     // this needs to be editied
