@@ -52,7 +52,7 @@ public class Slingshot : MonoBehaviour
         // Gradually reset rotation when it stops rotating
         if (puckRigidbody.angularVelocity == Vector3.zero)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2.5f);
         }
     }
 
