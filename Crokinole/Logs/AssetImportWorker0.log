@@ -776,3 +776,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 403.329035 seconds.
+  path: Assets/Mats/Wood.mat
+  artifactKey: Guid(dc7db3b9ed40f4098af89e8260315176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mats/Wood.mat using Guid(dc7db3b9ed40f4098af89e8260315176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c083e9f5ffa0ed300721a67927af3795') in 0.122520 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 6.231745 seconds.
+  path: Assets/Mats/New Material.mat
+  artifactKey: Guid(7a575c953827a4695a7fcaf5c239bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mats/New Material.mat using Guid(7a575c953827a4695a7fcaf5c239bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053d7019cb80dea77aad845bfac848a4') in 0.011655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 13.065728 seconds.
+  path: Assets/Mats/Black.mat
+  artifactKey: Guid(7a575c953827a4695a7fcaf5c239bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mats/Black.mat using Guid(7a575c953827a4695a7fcaf5c239bd35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38bfcd2d759cc0944ec8f4422d0d2de') in 0.042365 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
