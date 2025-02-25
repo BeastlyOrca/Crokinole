@@ -994,8 +994,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />
+    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

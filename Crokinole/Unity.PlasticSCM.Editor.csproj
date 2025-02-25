@@ -303,8 +303,8 @@
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/UI/Tree/TreeViewItemIds.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/Views/PendingChanges/Changelists/ChangelistMenu.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/PlasticNotification.cs" />
-    <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/Tool/LaunchInstaller.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/UI/ShowWindow.cs" />
+    <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/Tool/LaunchInstaller.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/Views/PendingChanges/UnityPendingChangesTree.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/UI/EditorDispatcher.cs" />
     <Compile Include="Library/PackageCache/com.unity.collab-proxy@2.6.0/Editor/UI/DrawActionHelpBox.cs" />
@@ -1293,8 +1293,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />
+    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

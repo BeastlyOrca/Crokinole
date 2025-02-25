@@ -84,8 +84,8 @@
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/LightmapUVEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/FlipFaceEdge.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ProbuilderRotateTool.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/VersionValidator.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/SmartConnect.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ObjExporter.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EntityVisibility.cs" />
@@ -158,8 +158,8 @@
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Selection/SelectHole.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/MenuActionShortcutAttribute.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ReflectionUtility.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Selection/SelectEdgeLoop.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorHandleUtility.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Selection/SelectEdgeLoop.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/TextureMoveTool.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/CollapseVertices.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorMaterialUtility.cs" />
@@ -169,16 +169,16 @@
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Object/SetCollider.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Interaction/ToggleHandlePivotPoint.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/MeshAndElementSelection.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Editors/OpenMaterialEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/LicenseEditor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Editors/OpenMaterialEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ProBuilderMeshPreview.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/DimensionsEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Selection/SelectSmoothingGroup.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorHandleDrawing.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/BooleanEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Object/ConformObjectNormals.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/BevelEdges.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/WeldVertices.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/BevelEdges.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorStyles.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/SceneDragAndDropListener.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Editors/OpenUVEditor.cs" />
@@ -225,22 +225,22 @@
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/UVEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/PolyShapeEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Editors/NewPolyShapeToggle.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/TextureRotateTool.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ProBuilderEditor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/TextureRotateTool.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/TooltipEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/BezierSplineEditor.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/VertexColorPalette.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/IconUtility.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/VertexColorPalette.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Object/SetTrigger.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Geometry/DuplicateFaces.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Object/MergeObjects.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ShapeMenuItems.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/Pref.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/ShapeMenuItems.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/MaterialPalette.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/EditorToolbarMenuItems.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Object/ProBuilderize.cs" />
-    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/VertexOnFaceEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/MenuActions/Interaction/ToggleXRay.cs" />
+    <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/VertexOnFaceEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.probuilder@5.2.3/Editor/EditorCore/SmoothGroupEditor.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -71,9 +71,9 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqCore/Changelog_1_2_1.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Documentation/DocumentationGenerator.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Decorators/SingleDecoratorProvider.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/ReorderableList/ReorderableListGUI.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqGraphs/Changelog_1_4_0.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Widgets/Groups/GraphGroupWidget.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/ReorderableList/ReorderableListGUI.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/EventWrapper.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Analytics/OnPreprocessBuildAnalyticsEventHandler.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Graph/GraphGUI.cs" />
@@ -344,8 +344,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/SbyteInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/ReorderableList/GenericListAdaptor.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Serialization/MovedFromAttributeExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Fonts/FontVariant.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/ContinuousNumberDrawer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Fonts/FontVariant.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqCore/Changelog_1_0_0.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/Changelog_1_4_0.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Inspector.cs" />
@@ -414,8 +414,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/Changelog_1_4_5.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Analysis/IGraphElementAnalysis.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Unity/LayerMaskInspector.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Licenses/License.Iconmonstr.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Colors/SkinnedColor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Licenses/License.Iconmonstr.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/LongInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Description/GraphItemDescriptor.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Utilities/LudiqEditorUtility.cs" />
@@ -426,9 +426,9 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Unity/RayInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Meta/ProjectSettingMetadata.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Descriptors/Description.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/BoltProduct.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/DiscreteNumberInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqCore/Changelog_1_0_4.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/BoltProduct.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Other/SemanticVersionInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugins/PluginUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Context/GraphContext.cs" />
@@ -436,8 +436,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Utilities/UnityAPI.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/SemanticVersion.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Fonts/FontWeight.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/DecimalInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Meta/ProxyMetadata.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Primitives/DecimalInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Meta/EditorPrefMetadata.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/BoltCore.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqGraphs/Changelog_1_4_1.cs" />
@@ -528,8 +528,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Assignment/Assigner.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqCore/Changelog_1_4_11.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Inspection/Special/ListInspector.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Fuzzy/FuzzyWindow.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqCore/Changelog_1_4_3.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/Fuzzy/FuzzyWindow.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Serialization/TypeSerializer.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Analytics/OnPreprocessBuildAnalytics.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Interface/ListOption.cs" />

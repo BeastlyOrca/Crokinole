@@ -1001,8 +1001,8 @@
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />
+    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
