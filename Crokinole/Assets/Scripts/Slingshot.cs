@@ -171,11 +171,6 @@ public class Slingshot : MonoBehaviour
     public void ToggleMoveMode()
     {
 
-        if (EventSystem.current.IsPointerOverGameObject()) 
-        {
-            return; // Ignore if clicking a UI element
-        }
-
         isMovingPuck = !isMovingPuck; // Toggle state
 
         if (isMovingPuck)
@@ -204,6 +199,12 @@ public class Slingshot : MonoBehaviour
 
     void MovePuckWithMouse()
     {
+
+         if (EventSystem.current.IsPointerOverGameObject()) 
+        {
+            return; // Ignore if clicking a UI element
+        }
+        
         if (Input.GetMouseButton(0)) // Hold and drag
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
