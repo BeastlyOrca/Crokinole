@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems; // Required for checking UI clicks
 
 // IDEAS: ADD SINGLE PLAYER LEVELS WHERE PUCKS ARE ALREADY PLACED AND THEY NEED TO HIT A TARGET HIGH SCORE
 public class Slingshot : MonoBehaviour
@@ -9,6 +10,8 @@ public class Slingshot : MonoBehaviour
     public float slingshotStrength = 10f; // Strength of the slingshot effect
 
     private bool isPulling = false;
+    private bool isMovingPuck = false; // NEW: Whether we are freely moving the puck
+
     private Vector3 startPosition;
     private Vector3 pullPosition; // Store the "pulled back" position
     private Vector3 oppPosition;
@@ -39,7 +42,15 @@ public class Slingshot : MonoBehaviour
 
     void Update()
     {
+        if (isMovingPuck)
+        {
+            MovePuckWithMouse();
+            return; // Prevents slingshot behavior from running
+        }
+
+
         HandleInput();
+
         //Debug.Log(puckRigidbody.velocity);
 
         // Update start position when the puck has stopped moving + rotating
@@ -153,6 +164,60 @@ public class Slingshot : MonoBehaviour
 
         //transform.rotation = Quaternion.identity; // Reset rotation to (0,0,0)
     }
+
+
+    // 🔹 Toggle Move Mode via Button
+    // CURRENT PROBLEM IS THAT WHEN CLICKING DONE THE POSITION UPDATES TO WHERE THE DONE BUTTON IS 
+    public void ToggleMoveMode()
+    {
+
+        if (EventSystem.current.IsPointerOverGameObject()) 
+        {
+            return; // Ignore if clicking a UI element
+        }
+
+        isMovingPuck = !isMovingPuck; // Toggle state
+
+        if (isMovingPuck)
+        {
+            puckRigidbody.isKinematic = true; // Disable physics while moving
+            Debug.Log("start");
+        }
+        
+    }
+
+    // 🔹 Button: Confirm & Return to Slingshot Mode
+    public void ConfirmPosition()
+    {
+
+
+        // Completely stop any movement before enabling physics
+        puckRigidbody.velocity = Vector3.zero;
+
+        isMovingPuck = false;
+
+        
+    
+        puckRigidbody.isKinematic = false; // Re-enable physics
+        startPosition = transform.position; // Update start position
+    }
+
+    void MovePuckWithMouse()
+    {
+        if (Input.GetMouseButton(0)) // Hold and drag
+        {
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Vector3 newPosition = hit.point;
+                newPosition.y = startPosition.y; // Keep on the same height plane
+                transform.position = newPosition;
+            }
+        }
+    }
+
 
     // this needs to be editied
     /*
