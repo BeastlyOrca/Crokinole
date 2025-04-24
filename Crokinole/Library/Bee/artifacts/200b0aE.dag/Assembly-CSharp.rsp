@@ -363,7 +363,9 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/HandleCollide.cs"
 "Assets/Scripts/InnerCheck.cs"
+"Assets/Scripts/Invisible.cs"
 "Assets/Scripts/OuterCheck.cs"
+"Assets/Scripts/ShootingZone.cs"
 "Assets/Scripts/SingleStart.cs"
 "Assets/Scripts/Slingshot.cs"
 -langversion:9.0

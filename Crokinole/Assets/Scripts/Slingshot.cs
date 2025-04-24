@@ -20,6 +20,9 @@ public class Slingshot : MonoBehaviour
     private Camera mainCamera;
 
     public LineRenderer lineRenderer; // Reference to the LineRenderer
+    public ShootingZone area;
+
+
 
     void Start()
     {
@@ -65,6 +68,8 @@ public class Slingshot : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2.5f);
         }
+
+        
     }
 
     void HandleInput()
@@ -214,6 +219,11 @@ public class Slingshot : MonoBehaviour
                 Vector3 newPosition = hit.point;
                 newPosition.y = startPosition.y; // Keep on the same height plane
                 transform.position = newPosition;
+            }
+
+            if (area._isTouching) {
+                //Debug.Log("valid");
+
             }
         }
     }
