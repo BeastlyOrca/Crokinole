@@ -922,6 +922,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521794564}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &544580154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 544580155}
+  m_Layer: 0
+  m_Name: P1Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &544580155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544580154}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6679764, y: -135.96489, z: 65.61774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1779072886}
+  - {fileID: 1686375060}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610504768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &785173112
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2843,7 +2876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &964128561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5568,7 +5601,7 @@ GameObject:
   - component: {fileID: 1686375057}
   - component: {fileID: 1686375056}
   m_Layer: 0
-  m_Name: T1ShootingArea (1)
+  m_Name: P1ShootingArea2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6712,11 +6745,11 @@ Transform:
   m_GameObject: {fileID: 1686375055}
   serializedVersion: 2
   m_LocalRotation: {x: 0.021223905, y: -0.7067882, z: 0.7067882, w: 0.021223905}
-  m_LocalPosition: {x: 77.8, y: -5, z: 4.5}
-  m_LocalScale: {x: 6.99, y: -5.8, z: 0.0001}
+  m_LocalPosition: {x: 76.13203, y: 130.96489, z: -61.117737}
+  m_LocalScale: {x: 6.9900002, y: -5.8, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 544580155}
   m_LocalEulerAnglesHint: {x: 90, y: 3.44, z: 180}
 --- !u!1 &1705485078
 GameObject:
@@ -7015,7 +7048,7 @@ GameObject:
   - component: {fileID: 1779072883}
   - component: {fileID: 1779072882}
   m_Layer: 0
-  m_Name: T1ShootingArea
+  m_Name: P1ShootingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8159,11 +8192,11 @@ Transform:
   m_GameObject: {fileID: 1779072881}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7067882, y: 0.021223905, z: -0.021223905, w: 0.7067882}
-  m_LocalPosition: {x: 78.3, y: -5.08, z: -2.2}
-  m_LocalScale: {x: -7.4, y: -5.8, z: 0.0001}
+  m_LocalPosition: {x: 76.63203, y: 130.88489, z: -67.81773}
+  m_LocalScale: {x: -7.4000006, y: -5.8, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 544580155}
   m_LocalEulerAnglesHint: {x: 90, y: 3.44, z: 0}
 --- !u!1 &1824082266
 GameObject:
@@ -11197,10 +11230,9 @@ SceneRoots:
   - {fileID: 2132269185}
   - {fileID: 1438355176}
   - {fileID: 1909651117}
-  - {fileID: 1779072886}
-  - {fileID: 1686375060}
   - {fileID: 1824082271}
   - {fileID: 785173116}
   - {fileID: 964128565}
   - {fileID: 1705485082}
   - {fileID: 1106002112}
+  - {fileID: 544580155}

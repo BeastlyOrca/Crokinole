@@ -167,7 +167,6 @@ public class Slingshot : MonoBehaviour
 
 
     // 🔹 Toggle Move Mode via Button
-    // CURRENT PROBLEM IS THAT WHEN CLICKING DONE THE POSITION UPDATES TO WHERE THE DONE BUTTON IS 
     public void ToggleMoveMode()
     {
 
@@ -187,7 +186,7 @@ public class Slingshot : MonoBehaviour
 
 
         // Completely stop any movement before enabling physics
-        puckRigidbody.velocity = Vector3.zero;
+        //puckRigidbody.velocity = Vector3.zero;
 
         isMovingPuck = false;
 
@@ -204,7 +203,7 @@ public class Slingshot : MonoBehaviour
         {
             return; // Ignore if clicking a UI element
         }
-        
+
         if (Input.GetMouseButton(0)) // Hold and drag
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
