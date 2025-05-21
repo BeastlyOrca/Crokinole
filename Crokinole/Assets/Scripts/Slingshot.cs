@@ -179,7 +179,7 @@ public class Slingshot : MonoBehaviour
 
         if (isMovingPuck)
         {
-            puckRigidbody.isKinematic = true; // Disable physics while moving
+            //puckRigidbody.isKinematic = true; // Disable physics while moving
             Debug.Log("start");
         }
         
@@ -224,6 +224,8 @@ public class Slingshot : MonoBehaviour
             if (area._isTouching) {
                 //Debug.Log("valid");
 
+            } else {
+                Debug.Log("invalid");
             }
         }
     }
