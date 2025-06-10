@@ -212,6 +212,12 @@ public class Slingshot : MonoBehaviour
     }
 
 
+
+    /**
+    this function will fuck with you later i can already tell. It clamps the position to one or the other cubes based on the 
+    x value. Since p1 moves how it does, you can easy check this. For the other players it wont be x < 1, it may be z values
+    this is now fine and working, just mess with the scales
+    */
     void MovePuckWithMouse()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -229,40 +235,31 @@ public class Slingshot : MonoBehaviour
 
                 if (movementBounds1 != null && movementBounds2 != null)
                 {
-                    bool inside1 = movementBounds1.bounds.Contains(targetPosition);
-                    bool inside2 = movementBounds2.bounds.Contains(targetPosition);
+      
+                    Vector3 clampedPosition;
 
-                    if (inside1 || inside2)
+                    if (this.transform.position.x < 1)
                     {
-                        // Allow free movement
-                        transform.position = targetPosition;
+                        Vector3 p2 = movementBounds2.ClosestPoint(targetPosition);
+                        float dist = Vector3.Distance(targetPosition, p2);
+                        clampedPosition = movementBounds2.ClosestPoint(targetPosition);
+
                     }
                     else
                     {
-                        
                         // Clamp to the closest point in either bound
                         Vector3 p1 = movementBounds1.ClosestPoint(targetPosition);
-                        Vector3 p2 = movementBounds2.ClosestPoint(targetPosition);
+                       
 
-                        float dist1 = Vector3.Distance(targetPosition, p1);
-                        float dist2 = Vector3.Distance(targetPosition, p2);
+                        float dist = Vector3.Distance(targetPosition, p1);
+                        clampedPosition = movementBounds1.ClosestPoint(targetPosition);
 
-                        Vector3 clampedPosition = (dist1 < dist2) ? p1 : p2;
-                        clampedPosition.y = startPosition.y;
-
-                        transform.position = clampedPosition;
                     }
-                }
-            }
 
-
-            if (area != null && area._isTouching)
-            {
-                // Valid area
-            }
-            else
-            {
-                Debug.Log("invalid");
+                        
+                    clampedPosition.y = startPosition.y;
+                    transform.position = clampedPosition;
+                }   
             }
         }
     }
