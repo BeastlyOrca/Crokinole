@@ -1,0 +1,607 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AddOns.Editor.csproj": {}
+  },
+  "projects": {
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AddOns.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AddOns.Editor.csproj",
+        "projectName": "Unity.ProBuilder.AddOns.Editor",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AddOns.Editor.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.AddOns.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Editor.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Editor.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AssetIdRemapUtility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AssetIdRemapUtility.csproj",
+        "projectName": "Unity.ProBuilder.AssetIdRemapUtility",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AssetIdRemapUtility.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.AssetIdRemapUtility/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Csg.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Csg.csproj",
+        "projectName": "Unity.ProBuilder.Csg",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Csg.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.Csg/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj",
+        "projectName": "Unity.ProBuilder",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Editor.csproj",
+        "projectName": "Unity.ProBuilder.Editor",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Editor.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AssetIdRemapUtility.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.AssetIdRemapUtility.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Csg.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Csg.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Stl.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Stl.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.Settings.Editor.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.Settings.Editor.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj",
+        "projectName": "Unity.ProBuilder.KdTree",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.KdTree/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj",
+        "projectName": "Unity.ProBuilder.Poly2Tri",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.Poly2Tri/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Stl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Stl.csproj",
+        "projectName": "Unity.ProBuilder.Stl",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Stl.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder.Stl/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.Settings.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.Settings.Editor.csproj",
+        "projectName": "Unity.Settings.Editor",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.Settings.Editor.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.Settings.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEditor.TestRunner.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/UnityEditor.TestRunner/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/UnityEngine.TestRunner.csproj",
+        "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+        "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/UnityEngine.TestRunner/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Unity.ProBuilder.KdTree/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.ProBuilder.KdTree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ProBuilder.KdTree.dll": {}
+        }
+      },
+      "Unity.ProBuilder.Poly2Tri/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.ProBuilder.Poly2Tri.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ProBuilder.Poly2Tri.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity.ProBuilder.KdTree/1.0.0": {
+      "type": "project",
+      "path": "Unity.ProBuilder.KdTree.csproj",
+      "msbuildProject": "Unity.ProBuilder.KdTree.csproj"
+    },
+    "Unity.ProBuilder.Poly2Tri/1.0.0": {
+      "type": "project",
+      "path": "Unity.ProBuilder.Poly2Tri.csproj",
+      "msbuildProject": "Unity.ProBuilder.Poly2Tri.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Unity.ProBuilder.KdTree >= 1.0.0",
+      "Unity.ProBuilder.Poly2Tri >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/nadirsdankmac/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj",
+      "projectName": "Unity.ProBuilder",
+      "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.csproj",
+      "packagesPath": "/Users/nadirsdankmac/.nuget/packages/",
+      "outputPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Temp/obj/Debug/Unity.ProBuilder/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/nadirsdankmac/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj": {
+              "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.KdTree.csproj"
+            },
+            "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj": {
+              "projectPath": "/Users/nadirsdankmac/Documents/GitHub/Crokinole/Crokinole/Unity.ProBuilder.Poly2Tri.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

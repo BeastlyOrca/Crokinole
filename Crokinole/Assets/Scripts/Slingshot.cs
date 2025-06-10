@@ -21,6 +21,9 @@ public class Slingshot : MonoBehaviour
 
     public LineRenderer lineRenderer; // Reference to the LineRenderer
     public ShootingZone area;
+    [SerializeField] private BoxCollider movementBounds; // assign this in the Inspector
+    public GameObject test;
+
 
 
 
@@ -41,6 +44,10 @@ public class Slingshot : MonoBehaviour
 
             lineRenderer.enabled = false;  // Disable by default
         }
+
+        test.SetActive(false);
+
+        
     }
 
     void Update()
@@ -174,61 +181,76 @@ public class Slingshot : MonoBehaviour
     // 🔹 Toggle Move Mode via Button
     public void ToggleMoveMode()
     {
-
-        isMovingPuck = !isMovingPuck; // Toggle state
+        test.SetActive(true);
+        isMovingPuck = !isMovingPuck;
 
         if (isMovingPuck)
         {
-            //puckRigidbody.isKinematic = true; // Disable physics while moving
+            puckRigidbody.isKinematic = true; // Disable physics interactions
+            puckRigidbody.velocity = Vector3.zero;
+            puckRigidbody.angularVelocity = Vector3.zero;
+
             Debug.Log("start");
         }
-        
     }
+
 
     // 🔹 Button: Confirm & Return to Slingshot Mode
     public void ConfirmPosition()
     {
-
-
-        // Completely stop any movement before enabling physics
-        //puckRigidbody.velocity = Vector3.zero;
-
+        test.SetActive(false);
         isMovingPuck = false;
 
-        
-    
         puckRigidbody.isKinematic = false; // Re-enable physics
-        startPosition = transform.position; // Update start position
+        startPosition = transform.position; // Update slingshot starting point
     }
+
 
     void MovePuckWithMouse()
     {
-
-         if (EventSystem.current.IsPointerOverGameObject()) 
+        if (EventSystem.current.IsPointerOverGameObject())
         {
             return; // Ignore if clicking a UI element
         }
 
-        if (Input.GetMouseButton(0)) // Hold and drag
+        if (Input.GetMouseButton(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))
             {
-                Vector3 newPosition = hit.point;
-                newPosition.y = startPosition.y; // Keep on the same height plane
-                transform.position = newPosition;
+                Vector3 targetPosition = hit.point;
+                targetPosition.y = startPosition.y;
+
+                if (movementBounds != null)
+                {
+                    // Get the closest point *on or inside* the bounds
+                    Vector3 clampedPosition = movementBounds.ClosestPoint(targetPosition);
+
+                    // Keep the puck on its original height plane
+                    clampedPosition.y = startPosition.y;
+
+                    transform.position = clampedPosition;
+                }
+                else
+                {
+                    transform.position = targetPosition;
+                }
             }
 
-            if (area._isTouching) {
-                //Debug.Log("valid");
-
-            } else {
+            if (area != null && area._isTouching)
+            {
+                // still valid
+            }
+            else
+            {
                 Debug.Log("invalid");
             }
         }
     }
+
+
 
 
     // this needs to be editied
