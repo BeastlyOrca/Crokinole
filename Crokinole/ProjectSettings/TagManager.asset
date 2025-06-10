@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Puck
   - Table
+  - MovementArea
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Board
   - Water
   - UI
   - 

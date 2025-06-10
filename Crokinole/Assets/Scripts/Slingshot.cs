@@ -21,8 +21,12 @@ public class Slingshot : MonoBehaviour
 
     public LineRenderer lineRenderer; // Reference to the LineRenderer
     public ShootingZone area;
-    [SerializeField] private BoxCollider movementBounds; // assign this in the Inspector
-    public GameObject test;
+    public BoxCollider movementBounds1;
+    public BoxCollider movementBounds2;
+    public GameObject p1A;
+    public GameObject p1B;
+    
+
 
 
 
@@ -45,8 +49,8 @@ public class Slingshot : MonoBehaviour
             lineRenderer.enabled = false;  // Disable by default
         }
 
-        test.SetActive(false);
-
+        p1A.SetActive(false);
+        p1B.SetActive(false);
         
     }
 
@@ -181,7 +185,8 @@ public class Slingshot : MonoBehaviour
     // 🔹 Toggle Move Mode via Button
     public void ToggleMoveMode()
     {
-        test.SetActive(true);
+        p1A.SetActive(true);
+        p1B.SetActive(true);
         isMovingPuck = !isMovingPuck;
 
         if (isMovingPuck)
@@ -198,7 +203,8 @@ public class Slingshot : MonoBehaviour
     // 🔹 Button: Confirm & Return to Slingshot Mode
     public void ConfirmPosition()
     {
-        test.SetActive(false);
+        p1A.SetActive(false);
+        p1B.SetActive(false);
         isMovingPuck = false;
 
         puckRigidbody.isKinematic = false; // Re-enable physics
@@ -208,10 +214,7 @@ public class Slingshot : MonoBehaviour
 
     void MovePuckWithMouse()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return; // Ignore if clicking a UI element
-        }
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         if (Input.GetMouseButton(0))
         {
@@ -223,25 +226,39 @@ public class Slingshot : MonoBehaviour
                 Vector3 targetPosition = hit.point;
                 targetPosition.y = startPosition.y;
 
-                if (movementBounds != null)
-                {
-                    // Get the closest point *on or inside* the bounds
-                    Vector3 clampedPosition = movementBounds.ClosestPoint(targetPosition);
 
-                    // Keep the puck on its original height plane
-                    clampedPosition.y = startPosition.y;
-
-                    transform.position = clampedPosition;
-                }
-                else
+                if (movementBounds1 != null && movementBounds2 != null)
                 {
-                    transform.position = targetPosition;
+                    bool inside1 = movementBounds1.bounds.Contains(targetPosition);
+                    bool inside2 = movementBounds2.bounds.Contains(targetPosition);
+
+                    if (inside1 || inside2)
+                    {
+                        // Allow free movement
+                        transform.position = targetPosition;
+                    }
+                    else
+                    {
+                        
+                        // Clamp to the closest point in either bound
+                        Vector3 p1 = movementBounds1.ClosestPoint(targetPosition);
+                        Vector3 p2 = movementBounds2.ClosestPoint(targetPosition);
+
+                        float dist1 = Vector3.Distance(targetPosition, p1);
+                        float dist2 = Vector3.Distance(targetPosition, p2);
+
+                        Vector3 clampedPosition = (dist1 < dist2) ? p1 : p2;
+                        clampedPosition.y = startPosition.y;
+
+                        transform.position = clampedPosition;
+                    }
                 }
             }
 
+
             if (area != null && area._isTouching)
             {
-                // still valid
+                // Valid area
             }
             else
             {
@@ -249,6 +266,7 @@ public class Slingshot : MonoBehaviour
             }
         }
     }
+
 
 
 
