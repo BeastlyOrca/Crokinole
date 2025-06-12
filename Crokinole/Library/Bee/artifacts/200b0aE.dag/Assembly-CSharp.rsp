@@ -368,6 +368,7 @@
 "Assets/Scripts/ShootingZone.cs"
 "Assets/Scripts/SingleStart.cs"
 "Assets/Scripts/Slingshot.cs"
+"Assets/Scripts/SlowDown.cs"
 -langversion:9.0
 
 /deterministic

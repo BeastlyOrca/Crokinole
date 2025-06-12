@@ -9,7 +9,7 @@ public class Slingshot : MonoBehaviour
     public float maxPullDistance = 2f; // Maximum distance the puck can be pulled
     public float slingshotStrength = 10f; // Strength of the slingshot effect
 
-    private bool isPulling = false;
+    public bool isPulling = false;
     private bool isMovingPuck = false; // NEW: Whether we are freely moving the puck
 
     private Vector3 startPosition;
@@ -18,6 +18,9 @@ public class Slingshot : MonoBehaviour
     private Rigidbody puckRigidbody;
 
     private Camera mainCamera;
+    private Vector3 velocityRef = Vector3.zero;
+    private Vector3 angularVelocityRef = Vector3.zero;
+
 
     public LineRenderer lineRenderer; // Reference to the LineRenderer
     public ShootingZone area;
@@ -62,26 +65,24 @@ public class Slingshot : MonoBehaviour
             return; // Prevents slingshot behavior from running
         }
 
-
         HandleInput();
 
-        //Debug.Log(puckRigidbody.velocity);
 
-        // Update start position when the puck has stopped moving + rotating
-        if (!isPulling && puckRigidbody.velocity.magnitude < 0.15f && puckRigidbody.angularVelocity.magnitude > 0.3f)
+        // When the puck has come to rest (both linear and angular velocity are small enough)
+        if (!isPulling && puckRigidbody.velocity.magnitude < 0.1f && puckRigidbody.angularVelocity.magnitude < 0.1f)
         {
             UpdateStartPosition();
-            stopMovement();
         }
 
-        // Gradually reset rotation when it stops rotating
-        if (puckRigidbody.angularVelocity == Vector3.zero)
+        /**
+        // Gradually reset rotation to upright if it's not moving
+        if (puckRigidbody.angularVelocity.magnitude < 0.05f)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2.5f);
         }
-
-        
+        */
     }
+
 
     void HandleInput()
     {
@@ -111,7 +112,7 @@ public class Slingshot : MonoBehaviour
             if (hit.transform == this.transform)
             {
                 isPulling = true;
-                puckRigidbody.isKinematic = true; // Temporarily disable physics
+                //puckRigidbody.isKinematic = true; // Temporarily disable physics
                 lineRenderer.enabled = true; // Enable the line renderer
             }
         }
@@ -144,7 +145,7 @@ public class Slingshot : MonoBehaviour
         if (isPulling)
         {
             isPulling = false;
-            puckRigidbody.isKinematic = false; // Re-enable physics
+            //puckRigidbody.isKinematic = false; // Re-enable physics
 
             // Calculate the force to apply
             Vector3 forceDirection = (startPosition - pullPosition).normalized;
@@ -179,6 +180,8 @@ public class Slingshot : MonoBehaviour
         //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3f);
 
         //transform.rotation = Quaternion.identity; // Reset rotation to (0,0,0)
+        // Fully reset rotation
+        transform.rotation = Quaternion.identity;
     }
 
 
@@ -191,7 +194,7 @@ public class Slingshot : MonoBehaviour
 
         if (isMovingPuck)
         {
-            puckRigidbody.isKinematic = true; // Disable physics interactions
+            //puckRigidbody.isKinematic = true; // Disable physics interactions
             puckRigidbody.velocity = Vector3.zero;
             puckRigidbody.angularVelocity = Vector3.zero;
 
@@ -207,7 +210,7 @@ public class Slingshot : MonoBehaviour
         p1B.SetActive(false);
         isMovingPuck = false;
 
-        puckRigidbody.isKinematic = false; // Re-enable physics
+        //puckRigidbody.isKinematic = false; // Re-enable physics
         startPosition = transform.position; // Update slingshot starting point
     }
 

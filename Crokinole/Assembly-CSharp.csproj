@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/SingleStart.cs" />
     <Compile Include="Assets/Scripts/ShootingZone.cs" />
+    <Compile Include="Assets/Scripts/SlowDown.cs" />
     <Compile Include="Assets/Scripts/OuterCheck.cs" />
     <Compile Include="Assets/Scripts/Slingshot.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
