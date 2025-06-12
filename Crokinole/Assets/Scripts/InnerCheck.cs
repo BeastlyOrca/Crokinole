@@ -9,7 +9,7 @@ public class InnerCheck : MonoBehaviour
     {
         if (other.CompareTag("Puck")) // Ensure pucks have the tag "Puck"
         {
-            Debug.Log("Puck entered the inner circle!");
+            //Debug.Log("Puck entered the inner circle!");
             // You can trigger scoring logic here
         }
     }
