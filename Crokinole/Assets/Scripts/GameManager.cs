@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ResetGame();
+        //ResetGame();
     }
 
     void Update()
