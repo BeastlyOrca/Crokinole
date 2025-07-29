@@ -365,10 +365,13 @@
 "Assets/Scripts/InnerCheck.cs"
 "Assets/Scripts/Invisible.cs"
 "Assets/Scripts/OuterCheck.cs"
+"Assets/Scripts/ResetButton.cs"
 "Assets/Scripts/ShootingZone.cs"
 "Assets/Scripts/SingleStart.cs"
 "Assets/Scripts/Slingshot.cs"
 "Assets/Scripts/SlowDown.cs"
+"Assets/Scripts/SpawnEnemy.cs"
+"Assets/Scripts/TrainingDummy.cs"
 -langversion:9.0
 
 /deterministic

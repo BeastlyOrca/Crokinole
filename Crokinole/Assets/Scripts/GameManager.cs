@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int p2PucksRemaining;
 
     public bool isPlayer1Turn = true; // True = P1, False = P2
+    
+    public int gameMode = 0;
 
     public Transform boardCenter; // Assign in Inspector
     public float innerCircleRadius = 2.5f; // Adjust for scoring area

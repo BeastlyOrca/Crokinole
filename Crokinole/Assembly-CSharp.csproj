@@ -65,14 +65,17 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/SingleStart.cs" />
     <Compile Include="Assets/Scripts/ShootingZone.cs" />
+    <Compile Include="Assets/Scripts/SpawnEnemy.cs" />
     <Compile Include="Assets/Scripts/SlowDown.cs" />
     <Compile Include="Assets/Scripts/OuterCheck.cs" />
+    <Compile Include="Assets/Scripts/ResetButton.cs" />
     <Compile Include="Assets/Scripts/Slingshot.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/bullseyeCheck.cs" />
     <Compile Include="Assets/Scripts/Invisible.cs" />
     <Compile Include="Assets/Scripts/Buttons.cs" />
     <Compile Include="Assets/Scripts/HandleCollide.cs" />
+    <Compile Include="Assets/Scripts/TrainingDummy.cs" />
     <Compile Include="Assets/Scripts/InnerCheck.cs" />
   </ItemGroup>
   <ItemGroup>
