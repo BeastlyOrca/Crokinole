@@ -23,17 +23,24 @@ public class GameManager : MonoBehaviour
     public float innerCircleRadius = 2.5f; // Adjust for scoring area
 
 
+    // Handleing spawn
+    public GameObject puckPrefab; // Assign in inspector
+    public Transform spawnPoint;  // Where the new puck should appear
+    private GameObject currentPuck; // Keep track of the active puck
+
+
+
     void Start()
     {
-        //ResetGame();
+        ResetGame();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
-    {
-        SceneManager.LoadScene(1);
-    }
+        {
+            SceneManager.LoadScene(1);
+        }
 
     }
 
@@ -63,10 +70,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void EndTurn()
+    public void EndTurn()
     {
-      
+        if (isPlayer1Turn)
+        {
+            p1PucksRemaining--;
+        }
+        else
+        {
+            p2PucksRemaining--;
+        }
+
+        // ✅ Switch turns
+        isPlayer1Turn = !isPlayer1Turn;
+
+        Debug.Log("Turn ended. Next turn: " + (isPlayer1Turn ? "Player 1" : "Player 2"));
+
+        // ✅ Check if game is over
+        if (p1PucksRemaining <= 0 && p2PucksRemaining <= 0)
+        {
+            EndGame();
+        }
     }
+
 
     void EndGame()
     {

@@ -371,6 +371,7 @@
 "Assets/Scripts/Slingshot.cs"
 "Assets/Scripts/SlowDown.cs"
 "Assets/Scripts/SpawnEnemy.cs"
+"Assets/Scripts/SpawnPlayer.cs"
 "Assets/Scripts/TrainingDummy.cs"
 -langversion:9.0
 

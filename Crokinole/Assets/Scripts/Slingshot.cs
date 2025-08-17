@@ -30,6 +30,11 @@ public class Slingshot : MonoBehaviour
     public GameObject p1B;
     
 
+    public bool validShot = false; // Track if we hit an opponent
+    private bool canShoot = true; // Only allow shooting when true
+
+
+
 
 
 
@@ -86,6 +91,9 @@ public class Slingshot : MonoBehaviour
 
     void HandleInput()
     {
+
+        if (!canShoot) return; // Ignore input if shooting is disabled
+
         if (Input.GetMouseButtonDown(0)) // Left mouse button pressed
         {
             StartPull();
@@ -145,24 +153,23 @@ public class Slingshot : MonoBehaviour
         if (isPulling)
         {
             isPulling = false;
-            //puckRigidbody.isKinematic = false; // Re-enable physics
 
+            //puckRigidbody.isKinematic = false; // Re-enable physics
             // Calculate the force to apply
             Vector3 forceDirection = (startPosition - pullPosition).normalized;
 
             // Set the Y component of the force direction to 0 to keep it horizontal
             forceDirection.y = 0;
 
-            // Normalize the force direction again to ensure it's a unit vector
+            // Normalize the force direction again to ensure it's a unit vector and Apply the force to the puck
             forceDirection.Normalize();
-
             float forceMagnitude = Vector3.Distance(pullPosition, startPosition) * slingshotStrength;
-
-            // Apply the force to the puck
             puckRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
 
-            // Reset the pull position and disable the line renderer
+        
+            // Reset the pull position and disable the line renderer + canShoot
             pullPosition = startPosition;
+            canShoot = false;
             lineRenderer.enabled = false;
         }
     }
@@ -173,16 +180,6 @@ public class Slingshot : MonoBehaviour
         startPosition = transform.position;
     }
 
-
-    void stopMovement() {
-        puckRigidbody.velocity = Vector3.zero; // stop velocity
-        puckRigidbody.angularVelocity = Vector3.zero; // Stop rotation
-        //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3f);
-
-        //transform.rotation = Quaternion.identity; // Reset rotation to (0,0,0)
-        // Fully reset rotation
-        transform.rotation = Quaternion.identity;
-    }
 
 
     // 🔹 Toggle Move Mode via Button
@@ -198,7 +195,7 @@ public class Slingshot : MonoBehaviour
             puckRigidbody.velocity = Vector3.zero;
             puckRigidbody.angularVelocity = Vector3.zero;
 
-            Debug.Log("start");
+            
         }
     }
 
