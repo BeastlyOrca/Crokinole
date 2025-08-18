@@ -37,10 +37,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // r to reset
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(1);
         }
+
+
 
     }
 

@@ -34,8 +34,8 @@ public class SlowDown : MonoBehaviour
 
 
         // Gradually slow down velocity and angular velocity
-        puckRigidbody.velocity = Vector3.SmoothDamp(puckRigidbody.velocity, Vector3.zero, ref velocityRef, 0.9f);
-        puckRigidbody.angularVelocity = Vector3.SmoothDamp(puckRigidbody.angularVelocity, Vector3.zero, ref angularVelocityRef, 0.9f);
+        puckRigidbody.velocity = Vector3.SmoothDamp(puckRigidbody.velocity, Vector3.zero, ref velocityRef, 0.88f);
+        puckRigidbody.angularVelocity = Vector3.SmoothDamp(puckRigidbody.angularVelocity, Vector3.zero, ref angularVelocityRef, 0.88f);
 
 
         // When the puck has come to rest (both linear and angular velocity are small enough)
@@ -72,7 +72,7 @@ public class SlowDown : MonoBehaviour
         //transform.rotation = Quaternion.identity; // Reset rotation to (0,0,0)
         // Fully reset rotation
         transform.rotation = Quaternion.identity;
-        Debug.Log("stopped");
+        //Debug.Log("stopped");
         isStopped = true;
 
         
@@ -93,7 +93,7 @@ public class SlowDown : MonoBehaviour
 
     public void isMove()
     {
-        Debug.Log("is move");
+        //Debug.Log("is move");
         isStopped = false;
 
         // Restore original bounciness

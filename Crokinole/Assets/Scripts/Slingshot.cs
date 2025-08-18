@@ -1,39 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; // Required for checking UI clicks
+using UnityEngine.EventSystems;
 
-// IDEAS: ADD SINGLE PLAYER LEVELS WHERE PUCKS ARE ALREADY PLACED AND THEY NEED TO HIT A TARGET HIGH SCORE
 public class Slingshot : MonoBehaviour
 {
-    public float maxPullDistance = 2f; // Maximum distance the puck can be pulled
-    public float slingshotStrength = 10f; // Strength of the slingshot effect
+    // =========================
+    // Slingshot Settings
+    // =========================
+    [Header("Slingshot Settings")]
+    [SerializeField] private float maxPullDistance = 2f;    // Maximum distance the puck can be pulled
+    [SerializeField] private float slingshotStrength = 10f; // Strength of the slingshot effect
 
-    public bool isPulling = false;
-    private bool isMovingPuck = false; // NEW: Whether we are freely moving the puck
+    // =========================
+    // Puck Movement
+    // =========================
+    [Header("Puck Movement")]
+    [SerializeField] private bool isMovingPuck = false; // Whether we are freely moving the puck (reposition, not shoot)
+    private bool isPulling = false;
 
     private Vector3 startPosition;
     private Vector3 pullPosition; // Store the "pulled back" position
     private Vector3 oppPosition;
     private Rigidbody puckRigidbody;
 
-    private Camera mainCamera;
     private Vector3 velocityRef = Vector3.zero;
     private Vector3 angularVelocityRef = Vector3.zero;
 
+    // =========================
+    // References
+    // =========================
+    [Header("References")]
+    [SerializeField] private LineRenderer lineRenderer;      // Reference to the LineRenderer
+    [SerializeField] private ShootingZone area;
+    [SerializeField] private BoxCollider movementBounds1;
+    [SerializeField] private BoxCollider movementBounds2;
+    [SerializeField] private GameObject p1A;
+    [SerializeField] private GameObject p1B;
 
-    public LineRenderer lineRenderer; // Reference to the LineRenderer
-    public ShootingZone area;
-    public BoxCollider movementBounds1;
-    public BoxCollider movementBounds2;
-    public GameObject p1A;
-    public GameObject p1B;
-    
+    // =========================
+    // Shot Tracking
+    // =========================
+    [Header("Shot Tracking")]
+    [SerializeField] private bool canShoot = true;    // Only allow shooting when true
+    [SerializeField] private bool validShot = false;  // Track if we hit an opponent
+    [SerializeField] public bool insideMiddle = false;
 
-    public bool validShot = false; // Track if we hit an opponent
-    private bool canShoot = true; // Only allow shooting when true
-
-
+    // =========================
+    // Owner
+    // =========================
+    [Header("Owner Settings")]
+    [SerializeField] public Player owner; // Player ownership
+    public enum Player { Player1, Player2, Player3, Player4 }
+    private Camera mainCamera;
 
 
 
@@ -57,9 +76,10 @@ public class Slingshot : MonoBehaviour
             lineRenderer.enabled = false;  // Disable by default
         }
 
+        // when instantiating new player, this throws an error, harmless FOR NOW
         p1A.SetActive(false);
         p1B.SetActive(false);
-        
+
     }
 
     void Update()
@@ -140,7 +160,7 @@ public class Slingshot : MonoBehaviour
 
             // Store the pull position (used for release calculation)
             pullPosition = startPosition + pullDirection * pullDistance;
-            oppPosition  = startPosition - pullDirection * pullDistance;   
+            oppPosition = startPosition - pullDirection * pullDistance;
 
             // Update the LineRenderer positions
             lineRenderer.SetPosition(0, startPosition); // Start of the line
@@ -166,7 +186,7 @@ public class Slingshot : MonoBehaviour
             float forceMagnitude = Vector3.Distance(pullPosition, startPosition) * slingshotStrength;
             puckRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
 
-        
+
             // Reset the pull position and disable the line renderer + canShoot
             pullPosition = startPosition;
             canShoot = false;
@@ -195,7 +215,7 @@ public class Slingshot : MonoBehaviour
             puckRigidbody.velocity = Vector3.zero;
             puckRigidbody.angularVelocity = Vector3.zero;
 
-            
+
         }
     }
 
@@ -235,7 +255,7 @@ public class Slingshot : MonoBehaviour
 
                 if (movementBounds1 != null && movementBounds2 != null)
                 {
-      
+
                     Vector3 clampedPosition;
 
                     if (this.transform.position.x < 1)
@@ -249,20 +269,43 @@ public class Slingshot : MonoBehaviour
                     {
                         // Clamp to the closest point in either bound
                         Vector3 p1 = movementBounds1.ClosestPoint(targetPosition);
-                       
+
 
                         float dist = Vector3.Distance(targetPosition, p1);
                         clampedPosition = movementBounds1.ClosestPoint(targetPosition);
 
                     }
 
-                        
+
                     clampedPosition.y = startPosition.y;
                     transform.position = clampedPosition;
-                }   
+                }
             }
         }
     }
+    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Try to get the Slingshot/puck script on the object we hit
+        Slingshot otherPuck = collision.gameObject.GetComponent<Slingshot>();
+
+        if (otherPuck != null)
+        {
+            // Check if we hit an opponent
+            if (otherPuck.owner != this.owner)
+            {
+                // check if the opponent is inside the middle
+                if (otherPuck.insideMiddle)
+                {
+                    validShot = true;
+                    Debug.Log($"{owner} hit {otherPuck.owner}! inside the middle, Valid shot.");
+                }
+                
+            }
+        }
+    }
+
 
 
 
