@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+// THE REASON WHY YOU CANT MOVE EM IS BECAUSE OF THE OUTER CHECK
+
 public class TrainingDummy : MonoBehaviour
 {
     public float speed = 10f;

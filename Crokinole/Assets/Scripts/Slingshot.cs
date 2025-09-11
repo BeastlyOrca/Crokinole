@@ -42,8 +42,8 @@ public class Slingshot : MonoBehaviour
     // Shot Tracking
     // =========================
     [Header("Shot Tracking")]
-    [SerializeField] private bool canShoot = true;    // Only allow shooting when true
-    [SerializeField] private bool validShot = false;  // Track if we hit an opponent
+    [SerializeField] public bool canShoot = true;    // Only allow shooting when true
+    [SerializeField] public bool validShot = false;  // Track if we hit an opponent
     [SerializeField] public bool insideMiddle = false;
 
     // =========================
@@ -53,6 +53,7 @@ public class Slingshot : MonoBehaviour
     [SerializeField] public Player owner; // Player ownership
     public enum Player { Player1, Player2, Player3, Player4 }
     private Camera mainCamera;
+    
 
 
 

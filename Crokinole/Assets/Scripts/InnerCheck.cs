@@ -6,65 +6,41 @@ using UnityEngine;
 public class InnerCheck : MonoBehaviour
 {
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player1")) // Ensure pucks have the tag "Puck"
-        {
-            Debug.Log("P1 entered the inner circle!");
-            // You can trigger scoring logic here
-        }
-
-        if (other.CompareTag("Player2")) // Ensure pucks have the tag "Puck"
-        {
-            Debug.Log("P2 entered the inner circle!");
-            // You can trigger scoring logic here
-        }
-
-        if (other.CompareTag("Player3")) // Ensure pucks have the tag "Puck"
-        {
-            Debug.Log("P3 entered the inner circle!");
-            // You can trigger scoring logic here
-        }
-
-        if (other.CompareTag("Player4")) // Ensure pucks have the tag "Puck"
-        {
-            Debug.Log("P4 entered the inner circle!");
-            // You can trigger scoring logic here
-        }
-
-    }
-    */
-
-
+    public GameManager gameManager;
+    private int points = 10;
 
     private void OnTriggerStay(Collider other)
     {
         SlowDown slowDown = other.GetComponent<SlowDown>();
         if (slowDown != null && slowDown.isStopped)
         {
-            //Debug.Log($"{other.tag} stopped in the inner circle!");
-            // scoring logic here
+            // Report to GameManager
+            
+
+            // Optional: store points on puck
+            slowDown.finalPosition = points;
+
+            // Mark so it doesn’t keep adding every frame
+            slowDown.isStopped = false; // or another flag like "countedInInner"
         }
 
         Slingshot puckScript = other.GetComponent<Slingshot>();
-        if (puckScript != null && slowDown.isStopped)
+        if (puckScript != null && puckScript.canShoot == false)
         {
-            puckScript.insideMiddle = true;
-            // scoring logic here
+            gameManager.UpdateInnerCount(other.tag, points);
         }
     }
-
 
     private void OnTriggerExit(Collider other)
     {
-        Slingshot puckScript = other.GetComponent<Slingshot>();
-        if (puckScript != null)
-        {
-            puckScript.insideMiddle = false;
-            //Debug.Log($"{other.tag} left the inner circle.");
-        }
-    }
         
 
+        Slingshot puckScript = other.GetComponent<Slingshot>();
+        if (puckScript != null && puckScript.canShoot == false)
+        {
+            // Report to GameManager
+            Debug.Log( other.tag + "left");
+            gameManager.UpdateInnerCount(other.tag, (points * -1));
+        }
+    }
 }

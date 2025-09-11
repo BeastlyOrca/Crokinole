@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class bullseyeCheck : MonoBehaviour
 {
+    // ITS THE FUCKING TAGS NADIR
     public bool isFullyOnTop = false;
+    //private int points = 20;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Puck"))
+        if (other.CompareTag("Player2"))
         {
             CheckIfFullyOnTop(other);
         }
@@ -16,7 +18,7 @@ public class bullseyeCheck : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Puck"))
+        if (other.CompareTag("Player2"))
         {
             CheckIfFullyOnTop(other);
         }
@@ -24,7 +26,7 @@ public class bullseyeCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Puck"))
+        if (other.CompareTag("Player2"))
         {
             isFullyOnTop = false;
             Debug.Log("A puck has left the bullseye.");

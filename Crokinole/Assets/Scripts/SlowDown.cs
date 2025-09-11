@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class SlowDown : MonoBehaviour
@@ -17,14 +18,27 @@ public class SlowDown : MonoBehaviour
 
     private Collider puckCollider;
     public float originalBounciness;
+    private GameManager gameManager; // dynamic reference
+    private Slingshot slingshot; // reference to slingshot script
+    public int finalPosition;
+    [HideInInspector] public bool countedOuter = false;
+
 
     void Start()
     {
         puckRigidbody = GetComponent<Rigidbody>();
         puckCollider = GetComponent<Collider>();
+        slingshot = GetComponent<Slingshot>(); //  same GameObject
 
         if (puckCollider.material != null)
             originalBounciness = puckCollider.material.bounciness;
+
+
+        // Dynamically find the GameManager
+        gameManager = FindObjectOfType<GameManager>();
+        
+
+
     }
 
 
@@ -46,6 +60,16 @@ public class SlowDown : MonoBehaviour
                 puckCollider.material.bounciness = 0f;
 
             stopMovement(); // fully stop
+
+            // Only end turn if puck was actually shot
+            if (slingshot != null && slingshot.canShoot == false)
+            {
+                finalPosition = 1;
+                
+                if (gameManager != null)
+                    gameManager.EndTurn();
+            }
+            
         }
         else
         {
@@ -86,7 +110,7 @@ public class SlowDown : MonoBehaviour
         if (puckCollider.material != null)
             puckCollider.material.bounciness = originalBounciness;
 
-        Debug.Log("Bounciness restored");
+        //Debug.Log("Bounciness restored");
     }
 
 
