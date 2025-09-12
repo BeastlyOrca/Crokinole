@@ -35,8 +35,6 @@ public class Slingshot : MonoBehaviour
     [SerializeField] private ShootingZone area;
     [SerializeField] private BoxCollider movementBounds1;
     [SerializeField] private BoxCollider movementBounds2;
-    [SerializeField] private GameObject p1A;
-    [SerializeField] private GameObject p1B;
 
     // =========================
     // Shot Tracking
@@ -53,7 +51,7 @@ public class Slingshot : MonoBehaviour
     [SerializeField] public Player owner; // Player ownership
     public enum Player { Player1, Player2, Player3, Player4 }
     private Camera mainCamera;
-    
+
 
 
 
@@ -78,8 +76,16 @@ public class Slingshot : MonoBehaviour
         }
 
         // when instantiating new player, this throws an error, harmless FOR NOW
-        p1A.SetActive(false);
-        p1B.SetActive(false);
+        //p1A.SetActive(false);
+        //p1B.SetActive(false);
+
+
+        // Get bounds from GameManager
+        movementBounds1 = GameManager.Instance.movementBounds1;
+        movementBounds2 = GameManager.Instance.movementBounds2;
+
+        movementBounds1.enabled = false;
+        movementBounds2.enabled = false;
 
     }
 
@@ -192,6 +198,10 @@ public class Slingshot : MonoBehaviour
             pullPosition = startPosition;
             canShoot = false;
             lineRenderer.enabled = false;
+
+            // 🔹 Disable the script so this puck can’t be re-shot
+            this.enabled = false;
+            
         }
     }
 
@@ -203,11 +213,14 @@ public class Slingshot : MonoBehaviour
 
 
 
-    // 🔹 Toggle Move Mode via Button
+    // Toggle Move Mode via Button
     public void ToggleMoveMode()
     {
-        p1A.SetActive(true);
-        p1B.SetActive(true);
+        //p1A.SetActive(true);
+        //p1B.SetActive(true);
+        movementBounds1.enabled = true;
+        movementBounds2.enabled = true;
+
         isMovingPuck = !isMovingPuck;
 
         if (isMovingPuck)
@@ -224,8 +237,10 @@ public class Slingshot : MonoBehaviour
     // 🔹 Button: Confirm & Return to Slingshot Mode
     public void ConfirmPosition()
     {
-        p1A.SetActive(false);
-        p1B.SetActive(false);
+        //p1A.SetActive(false);
+        //p1B.SetActive(false);
+        movementBounds1.enabled = false;
+        movementBounds2.enabled = false;
         isMovingPuck = false;
 
         //puckRigidbody.isKinematic = false; // Re-enable physics

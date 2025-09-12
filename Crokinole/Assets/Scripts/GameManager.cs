@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance; // Singleton for easy access
+    // Singleton pattern (optional, makes access easier)
+    public static GameManager Instance { get; private set; }
 
     public int player1Score = 0;
     public int player2Score = 0;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Handleing spawn
     public GameObject puckPrefab; // Assign in inspector
     public Transform spawnPoint;  // Where the new puck should appear
-    private GameObject currentPuck; // Keep track of the active puck
+    public GameObject currentPuck; // Keep track of the active puck
 
     public Transform player1Parent;
     public Transform player2Parent;
@@ -35,6 +36,17 @@ public class GameManager : MonoBehaviour
     public int p2C;
 
 
+
+    [Header("Movement Bounds")]
+    public BoxCollider movementBounds1;
+    public BoxCollider movementBounds2;
+
+    // Singleton pattern (optional, makes access easier)
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
@@ -141,7 +153,7 @@ public class GameManager : MonoBehaviour
     {
         return player2Parent.childCount;
     }
-    
+
     public void UpdateInnerCount(string playerTag, int points)
     {
         if (playerTag == "Player1") player1Score += points;
@@ -156,6 +168,31 @@ public class GameManager : MonoBehaviour
         else if (playerTag == "Player2") player2Score += points;
 
         //Debug.Log($"Outer Circle: P1={player1Outer}, P2={player2Outer}");
+    }
+
+    public void ToggleCurrentPuckMoveMode()
+    {
+        if (currentPuck != null)
+        {
+            Slingshot slingshot = currentPuck.GetComponent<Slingshot>();
+            if (slingshot != null)
+            {
+                slingshot.ToggleMoveMode();
+            }
+        }
+    }
+    
+
+    public void ConfirmPuckMove()
+    {
+        if (currentPuck != null)
+        {
+            Slingshot slingshot = currentPuck.GetComponent<Slingshot>();
+            if (slingshot != null)
+            {
+                slingshot.ConfirmPosition();
+            }
+        }
     }
 
 
