@@ -100,8 +100,8 @@
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/VisualStudioInstallation.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/SolutionProperties.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/FileUtility.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/VersionPair.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/ProjectGeneration/GUIDProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/VersionPair.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/UsageUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/Messaging/Messenger.cs" />
     <Compile Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/AsyncOperation.cs" />
