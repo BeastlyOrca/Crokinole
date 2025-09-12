@@ -9,8 +9,8 @@ public class Slingshot : MonoBehaviour
     // Slingshot Settings
     // =========================
     [Header("Slingshot Settings")]
-    [SerializeField] private float maxPullDistance = 2f;    // Maximum distance the puck can be pulled
-    [SerializeField] private float slingshotStrength = 10f; // Strength of the slingshot effect
+    [SerializeField] private float maxPullDistance = 3f;    // Maximum distance the puck can be pulled
+    [SerializeField] private float slingshotStrength = 100f; // Strength of the slingshot effect
 
     // =========================
     // Puck Movement

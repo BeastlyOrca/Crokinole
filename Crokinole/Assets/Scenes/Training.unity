@@ -6912,6 +6912,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2053919987591742036, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 525a28846ae9c4078af18c6225580fac, type: 2}
+    - target: {fileID: 2053919987591742036, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
       value: 0.013698578
       objectReference: {fileID: 0}
@@ -6980,6 +6984,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1292672136}
     - target: {fileID: 5913614169903153838, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: maxPullDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913614169903153838, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
       propertyPath: movementBounds1
       value: 
       objectReference: {fileID: 0}
@@ -6987,9 +6995,25 @@ PrefabInstance:
       propertyPath: movementBounds2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5913614169903153838, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: slingshotStrength
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687291626146663000, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687291626146663000, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687291626146663000, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7687291626146663000, guid: a254a77faaa2f43aaa580e3ffa55ba1d, type: 3}
       propertyPath: m_Interpolate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7005,8 +7029,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1862683802}
     m_Modifications:
     - target: {fileID: 5119401157256079110, guid: 943e6a2f60fd24f8aa934c0822ad7be3, type: 3}
-      propertyPath: m_Interpolate
+      propertyPath: m_Drag
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119401157256079110, guid: 943e6a2f60fd24f8aa934c0822ad7be3, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119401157256079110, guid: 943e6a2f60fd24f8aa934c0822ad7be3, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119401157256079110, guid: 943e6a2f60fd24f8aa934c0822ad7be3, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5636124561501941921, guid: 943e6a2f60fd24f8aa934c0822ad7be3, type: 3}
       propertyPath: owner

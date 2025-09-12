@@ -100,16 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8912027cde5a4dac9f1b876e9495b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPullDistance: 2.5
-  slingshotStrength: 18.5
-  isPulling: 0
+  maxPullDistance: 3
+  slingshotStrength: 100
+  isMovingPuck: 0
   lineRenderer: {fileID: 2053919987591742036}
   area: {fileID: 0}
   movementBounds1: {fileID: 0}
   movementBounds2: {fileID: 0}
-  p1A: {fileID: 0}
-  p1B: {fileID: 0}
+  canShoot: 1
   validShot: 0
+  insideMiddle: 0
+  owner: 0
 --- !u!54 &7687291626146663000
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118,9 +119,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2881065854338399851}
   serializedVersion: 4
-  m_Mass: 0.8
+  m_Mass: 5
   m_Drag: 1
-  m_AngularDrag: 0
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -158,7 +159,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 525a28846ae9c4078af18c6225580fac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,3 +278,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStopped: 0
   originalBounciness: 0
+  finalPosition: 0
+  countedOuter: 0
