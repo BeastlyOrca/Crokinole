@@ -24,10 +24,10 @@ public class InnerCheck : MonoBehaviour
             slowDown.isStopped = false; // or another flag like "countedInInner"
         }
 
-        Slingshot puckScript = other.GetComponent<Slingshot>();
-        if (puckScript != null && puckScript.canShoot == false)
+        PuckID puckScript = other.GetComponent<PuckID>();
+        if (puckScript != null)
         {
-            gameManager.UpdateInnerCount(other.tag, points);
+            puckScript.insideMiddle = true;
         }
     }
 

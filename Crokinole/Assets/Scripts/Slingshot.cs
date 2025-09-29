@@ -43,6 +43,10 @@ public class Slingshot : MonoBehaviour
     [SerializeField] public bool canShoot = true;    // Only allow shooting when true
     [SerializeField] public bool validShot = false;  // Track if we hit an opponent
     [SerializeField] public bool insideMiddle = false;
+    public float shotCooldown = 1.0f; // ignore stop check for 0.2s
+    public float shotTimer = 0f;
+    public bool finish;
+    public bool startTime = false;
 
     // =========================
     // Owner
@@ -100,10 +104,19 @@ public class Slingshot : MonoBehaviour
         HandleInput();
 
 
+        
+
+
         // When the puck has come to rest (both linear and angular velocity are small enough)
-        if (!isPulling && puckRigidbody.velocity.magnitude < 0.1f && puckRigidbody.angularVelocity.magnitude < 0.1f)
+        // only allow stop checks once timer is up
+        if (!isPulling && 
+            puckRigidbody.velocity.magnitude < 0.1f && 
+            puckRigidbody.angularVelocity.magnitude < 0.1f)
         {
+            //finish = true;
+            //Debug.Log("fini");
             UpdateStartPosition();
+            
         }
 
         /**
@@ -193,6 +206,10 @@ public class Slingshot : MonoBehaviour
             float forceMagnitude = Vector3.Distance(pullPosition, startPosition) * slingshotStrength;
             puckRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
 
+            //tijmer
+            startTime = true;
+            shotTimer = shotCooldown;
+
 
             // Reset the pull position and disable the line renderer + canShoot
             pullPosition = startPosition;
@@ -200,7 +217,7 @@ public class Slingshot : MonoBehaviour
             lineRenderer.enabled = false;
 
             // 🔹 Disable the script so this puck can’t be re-shot
-            this.enabled = false;
+            //this.enabled = false;
             
         }
     }
@@ -300,16 +317,19 @@ public class Slingshot : MonoBehaviour
         }
     }
     
+    
+    // check if valid shot 
 
     private void OnCollisionEnter(Collision collision)
     {
         // Try to get the Slingshot/puck script on the object we hit
-        Slingshot otherPuck = collision.gameObject.GetComponent<Slingshot>();
+        PuckID otherPuck = collision.gameObject.GetComponent<PuckID>();
+        PuckID thisPuck = this.GetComponent<PuckID>();
 
         if (otherPuck != null)
         {
             // Check if we hit an opponent
-            if (otherPuck.owner != this.owner)
+            if (otherPuck.owner != thisPuck.owner)
             {
                 // check if the opponent is inside the middle
                 if (otherPuck.insideMiddle)
@@ -317,7 +337,7 @@ public class Slingshot : MonoBehaviour
                     validShot = true;
                     Debug.Log($"{owner} hit {otherPuck.owner}! inside the middle, Valid shot.");
                 }
-                
+
             }
         }
     }

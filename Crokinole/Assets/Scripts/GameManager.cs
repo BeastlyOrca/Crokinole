@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public int p1C;
     public int p2C;
+    public bool gameStart = true;
 
 
 
@@ -181,7 +182,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
 
     public void ConfirmPuckMove()
     {
@@ -194,6 +195,46 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
+    void updateGame()
+    {
+        // get all pucks on the board, their player owner and assign points
+
+
+    }
+
+    public void UpdateCount(string playerTag, int points)
+    {
+
+        Debug.Log(playerTag);
+        if (playerTag == "Player1") player1Score += points;
+        else if (playerTag == "Player2") player2Score += points;
+
+        //Debug.Log($"Outer Circle: P1={player1Outer}, P2={player2Outer}");
+    }
+    
+
+    public void ResolvePuckShot(GameObject puck, bool validShot, string playerTag)
+    {
+        if (validShot)
+        {
+            // ✅ award points (could be more sophisticated if you calculate circles later)
+            UpdateCount(playerTag, 5);
+            Debug.Log($"{playerTag} scored 5 points!");
+
+        }
+        else
+        {
+            // ❌ invalid shot, remove puck
+            //Debug.Log($"{playerTag}'s shot was invalid – puck removed.");
+            //Destroy(puck);
+            
+        }
+
+        EndTurn();
+    }
+
 
 
 }

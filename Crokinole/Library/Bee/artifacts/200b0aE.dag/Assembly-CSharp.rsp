@@ -381,6 +381,7 @@
 "Assets/Scripts/InnerCheck.cs"
 "Assets/Scripts/Invisible.cs"
 "Assets/Scripts/OuterCheck.cs"
+"Assets/Scripts/PuckID.cs"
 "Assets/Scripts/ResetButton.cs"
 "Assets/Scripts/ShootingZone.cs"
 "Assets/Scripts/SingleStart.cs"

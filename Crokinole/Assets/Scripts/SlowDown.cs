@@ -22,6 +22,7 @@ public class SlowDown : MonoBehaviour
     private Slingshot slingshot; // reference to slingshot script
     public int finalPosition;
     [HideInInspector] public bool countedOuter = false;
+    public float tmr = 0.5f;
 
 
     void Start()
@@ -55,19 +56,41 @@ public class SlowDown : MonoBehaviour
         // When the puck has come to rest (both linear and angular velocity are small enough)
         if (puckRigidbody.velocity.magnitude < 0.1f && puckRigidbody.angularVelocity.magnitude < 0.1f)
         {
+
+            if (slingshot.startTime && tmr > 0)
+            {
+                //Debug.Log("shar");
+                tmr -= Time.deltaTime;
+            }
+
+
             // Temporarily remove bounciness
             if (puckCollider.material != null)
                 puckCollider.material.bounciness = 0f;
+
 
             stopMovement(); // fully stop
 
             // Only end turn if puck was actually shot
             if (slingshot != null && slingshot.canShoot == false)
             {
+
                 finalPosition = 1;
-                
-                if (gameManager != null)
-                    gameManager.EndTurn();
+
+
+
+                if (gameManager != null && tmr <= 0)
+                {
+                    Debug.Log("fini");
+
+                    //might not need to disable anymore?
+                    slingshot.enabled = false;
+
+                    gameManager.ResolvePuckShot(this.gameObject, slingshot.validShot, this.tag);
+
+                }
+
+
             }
             
         }
@@ -89,6 +112,7 @@ public class SlowDown : MonoBehaviour
 
     void stopMovement()
     {
+        
         puckRigidbody.velocity = Vector3.zero; // stop velocity
         puckRigidbody.angularVelocity = Vector3.zero; // Stop rotation
         //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3f);

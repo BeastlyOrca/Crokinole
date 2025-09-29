@@ -79,6 +79,7 @@
     <Compile Include="Assets/Scripts/HandleCollide.cs" />
     <Compile Include="Assets/Scripts/TrainingDummy.cs" />
     <Compile Include="Assets/Scripts/InnerCheck.cs" />
+    <Compile Include="Assets/Scripts/PuckID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
